@@ -109,10 +109,17 @@ const MatchdayView = ({ matchdays }) => {
 
           <div className="matchday-awards">
             <h3>Spiel-Info</h3>
-            <p><strong>Highscore:</strong> {selectedMatchday.awards.highscore.map(a => `${a.name} (${a.score})`).join(', ') || 'Keine Angabe'}</p>
-            <p><strong>Lowscore:</strong> {selectedMatchday.awards.lowscore.map(a => `${a.name} (${a.score})`).join(', ') || 'Keine Angabe'}</p>
-            <p><strong>Highfinish:</strong> {selectedMatchday.awards.highfinish.map(a => `${a.name} (${a.score})`).join(', ') || 'Keine Angabe'}</p>
-            <p><strong>Shortgame:</strong> {selectedMatchday.awards.shortgame.map(a => `${a.name} (${a.score})`).join(', ') || 'Keine Angabe'}</p>
+            <div className="awards-container">
+              <div className="awards-left">
+                <p><strong>Highscore:</strong> {selectedMatchday.awards.highscore.map(a => `${a.name} (${a.score})`).join(', ') || 'Keine Angabe'}</p>
+                <p><strong>Highfinish:</strong> {selectedMatchday.awards.highfinish.map(a => `${a.name} (${a.score})`).join(', ') || 'Keine Angabe'}</p>
+                <p><strong>Shortgame:</strong> {selectedMatchday.awards.shortgame.map(a => `${a.name} (${a.score})`).join(', ') || 'Keine Angabe'}</p>
+              </div>
+              <div className="awards-right">
+                <p><strong>Lowscore:</strong> {selectedMatchday.awards.lowscore.map(a => `${a.name} (${a.score})`).join(', ') || 'Keine Angabe'}</p>
+                <p><strong>Starter:</strong> {selectedMatchday.awards.starters.join(', ') || 'Keine Angabe'}</p>
+              </div>
+            </div>
           </div>
         </div>
       )}

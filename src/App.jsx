@@ -68,7 +68,7 @@ function App() {
       ]);
 
       const matchdays = processMatchdays(flattenedMatchdays, starterData);
-      const playerStats = calculatePlayerStats(flattenedMatchdays, playersData);
+      const playerStats = calculatePlayerStats(flattenedMatchdays, playersData, starterData);
       const ligaTable = processLigaTable(ligaData);
 
       setData({

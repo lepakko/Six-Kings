@@ -180,6 +180,23 @@
   color: #ffc107;
 }
 
+/* Awards Container Layout */
+.awards-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.awards-left,
+.awards-right {
+  flex: 1;
+}
+
+.awards-left p,
+.awards-right p {
+  margin: 8px 0;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .matchday-container {
@@ -254,6 +271,12 @@
 
   .matchday-awards h3 {
     font-size: 1.5em;
+  }
+  
+  /* Mobile awards layout */
+  .awards-container {
+    flex-direction: column;
+    gap: 20px;
   }
 }
 
@@ -353,5 +376,11 @@
   .matchday-awards p {
     font-size: 0.9em;
     margin: 8px 0;
+  }
+  
+  /* Mobile awards layout */
+  .awards-container {
+    flex-direction: column;
+    gap: 15px;
   }
 }

@@ -32,7 +32,7 @@ export const processLigaTable = (ligaData) => {
 /**
  * Berechnet Spielerstatistiken aus den Rohdaten der Spieltage.
  */
-export const calculatePlayerStats = (matchdaysData, allPlayersData) => {
+export const calculatePlayerStats = (matchdaysData, allPlayersData, starterData) => {
     const playerStats = {};
 
     // Initialisiere die Statistik für alle Spieler aus der Hauptliste
@@ -51,6 +51,7 @@ export const calculatePlayerStats = (matchdaysData, allPlayersData) => {
                     lowscore: [],
                     highfinish: [],
                     shortgame: [],
+                    starterCount: 0,
                 };
             }
         });
@@ -75,6 +76,7 @@ export const calculatePlayerStats = (matchdaysData, allPlayersData) => {
                             lowscore: [],
                             highfinish: [],
                             shortgame: [],
+                            starterCount: 0,
                         };
                     }
 
@@ -98,6 +100,21 @@ export const calculatePlayerStats = (matchdaysData, allPlayersData) => {
         });
     }
 
+    // Verarbeitet Starter-Daten
+    if (starterData && Array.isArray(starterData)) {
+        starterData.forEach(row => {
+            const starter1 = row['Starter 1'];
+            const starter2 = row['Starter 2'];
+            
+            if (starter1 && playerStats[starter1]) {
+                playerStats[starter1].starterCount += 1;
+            }
+            if (starter2 && playerStats[starter2]) {
+                playerStats[starter2].starterCount += 1;
+            }
+        });
+    }
+
     const finalStats = Object.values(playerStats).map(player => {
         const gamesPlayed = player.wins + player.losses;
         const winPercentage = gamesPlayed > 0 ? (player.wins / gamesPlayed) * 100 : 0;
@@ -115,7 +132,7 @@ export const calculatePlayerStats = (matchdaysData, allPlayersData) => {
             lowscore: player.lowscore.length > 0 ? Math.max(...player.lowscore) : '-',
             highfinish: player.highfinish.length > 0 ? Math.max(...player.highfinish) : '-',
             shortgame: player.shortgame.length > 0 ? Math.max(...player.shortgame) : '-',
-            starter: '-',
+            starter: player.starterCount > 0 ? player.starterCount : '-',
         };
     });
 
@@ -136,7 +153,7 @@ export const calculatePlayerStats = (matchdaysData, allPlayersData) => {
  * Verarbeitet die Daten für die Spieltage.
  * Behält die Werte von Spieltag, Datum und Gegnerteam bei, wenn diese leer sind.
  */
-export const processMatchdays = (matchdaysData) => {
+export const processMatchdays = (matchdaysData, starterData) => {
   const groupedMatchdays = {};
   let currentSpieltag = '';
   let currentDate = '';
@@ -171,6 +188,7 @@ export const processMatchdays = (matchdaysData) => {
               lowscore: [],
               highfinish: [],
               shortgame: [],
+              starters: [],
             }
           };
         }
@@ -198,6 +216,29 @@ export const processMatchdays = (matchdaysData) => {
         }
         if (row['Shortgame']) {
           groupedMatchdays[spieltagKey].awards.shortgame.push({ name: row['Spieler 1'], score: parseInt(row['Shortgame']) || 0 });
+        }
+      }
+    });
+  }
+
+  // Verarbeitet Starter-Daten für jeden Spieltag
+  if (starterData && Array.isArray(starterData)) {
+    starterData.forEach(row => {
+      const spieltag = row['Spieltag'];
+      const starter1 = row['Starter 1'];
+      const starter2 = row['Starter 2'];
+      
+      if (spieltag) {
+        const spieltagId = parseInt(spieltag);
+        const spieltagKey = `Spieltag ${spieltagId}`;
+        
+        if (groupedMatchdays[spieltagKey]) {
+          if (starter1) {
+            groupedMatchdays[spieltagKey].awards.starters.push(starter1);
+          }
+          if (starter2) {
+            groupedMatchdays[spieltagKey].awards.starters.push(starter2);
+          }
         }
       }
     });
