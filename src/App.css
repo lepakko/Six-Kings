@@ -204,3 +204,90 @@ tr:hover {
 .award-item span {
   display: block;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 15px 10px;
+  }
+
+  .App-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+
+  .View-selector {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .View-selector-button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+    min-width: 80px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .loading-state {
+    padding: 30px 20px;
+    font-size: 1em;
+  }
+
+  /* Table responsiveness */
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    min-width: 600px; /* Ensures table doesn't get too cramped */
+    font-size: 0.85em;
+  }
+
+  th, td {
+    padding: 8px 10px;
+    white-space: nowrap;
+  }
+
+  /* Improve touch targets */
+  th, td {
+    min-height: 44px; /* iOS recommended touch target size */
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    padding: 12px 8px;
+  }
+
+  .App-title {
+    font-size: 1.5em;
+    letter-spacing: 0.5px;
+  }
+
+  .View-selector {
+    gap: 6px;
+  }
+
+  .View-selector-button {
+    padding: 6px 12px;
+    font-size: 0.85em;
+    min-width: 70px;
+  }
+
+  .content {
+    padding: 8px;
+  }
+
+  table {
+    font-size: 0.8em;
+  }
+
+  th, td {
+    padding: 6px 8px;
+  }
+}

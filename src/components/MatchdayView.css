@@ -1,117 +1,357 @@
 /* src/components/MatchdayView.css */
 
-.matchday-view {
-    padding: 20px;
+.matchday-container {
+  margin: 20px;
+  color: #fff;
+}
+
+.matchday-selector-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 15px;
+}
+
+.matchday-label {
+  color: #ffc107;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.matchday-select {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #333;
+  color: #e0e0e0;
+  border: 1px solid #555;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.matchday-details {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.matchday-title {
+  color: #ffc107;
+  font-size: 2.2em;
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+.matchday-info {
+  color: #aaa;
+  font-size: 1.1em;
+  margin: 5px 0;
+  text-align: center;
+}
+
+/* Games Container and Blocks */
+.games-container {
+  margin: 30px 0;
+}
+
+.games-block {
+  margin-bottom: 40px;
+}
+
+.block-title {
+  color: #ffc107;
+  font-size: 1.5em;
+  margin: 0 0 20px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ffc107;
+  text-align: center;
+}
+
+.games-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Game Cards */
+.game-card {
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #444;
+  min-width: 200px;
+  max-width: 240px;
+  flex: 1;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #555;
+}
+
+.game-number {
+  color: #ffc107;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.game-type {
+  color: #aaa;
+  font-size: 0.8em;
+  background-color: #333;
+  padding: 3px 6px;
+  border-radius: 3px;
+}
+
+.game-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.game-team {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  border-radius: 4px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+.game-team.winner {
+  background-color: rgba(34, 197, 94, 0.2);
+  border: 2px solid #22c55e;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+}
+
+.game-team.winner .team-players {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.team-players {
+  color: #e0e0e0;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.game-score {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ffc107;
+  padding: 6px;
+  background-color: #1f1f1f;
+  border-radius: 4px;
+  margin: 0 auto;
+  width: fit-content;
+  min-width: 60px;
+}
+
+/* Awards Section */
+.matchday-awards {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px solid #444;
+}
+
+.matchday-awards h3 {
+  color: #ffc107;
+  font-size: 1.8em;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.matchday-awards p {
+  color: #e0e0e0;
+  font-size: 1em;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.matchday-awards strong {
+  color: #ffc107;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .matchday-container {
+    margin: 10px;
   }
-  
-  .matchday-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    gap: 15px;
+
+  .matchday-selector-container {
+    margin-bottom: 15px;
+    gap: 10px;
   }
-  
-  .matchday-controls select {
-    padding: 8px;
-    border-radius: 5px;
-    background-color: #333;
-    color: #e0e0e0;
-    border: 1px solid #555;
-    font-size: 1em;
-    cursor: pointer;
-  }
-  
-  .matchday-card {
-    background-color: #1f1f1f;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  }
-  
-  .matchday-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .matchday-header h2 {
-    font-size: 1.8em;
-    color: #ffc107;
-    margin: 0 0 5px 0;
-  }
-  
-  .matchday-header p {
-    font-size: 1em;
-    color: #aaa;
-    margin: 0;
-  }
-  
-  .game-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .game-item {
-    background-color: #2a2a2a;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .game-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .game-players {
+
+  .matchday-label {
     font-size: 1.1em;
-    font-weight: bold;
-    color: #e0e0e0;
+  }
+
+  .matchday-select {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    min-width: 200px;
+  }
+
+  .matchday-details {
+    padding: 15px;
+  }
+
+  .matchday-title {
+    font-size: 1.8em;
+  }
+
+  .matchday-info {
+    font-size: 0.95em;
+  }
+
+  .games-container {
+    margin: 20px 0;
+  }
+
+  .games-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .game-card {
+    min-width: 280px;
+    max-width: 320px;
+  }
+  
+  .game-header {
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+  }
+  
+  .game-content {
+    gap: 8px;
+  }
+  
+  .game-team {
+    padding: 5px;
   }
   
   .game-score {
     font-size: 1.1em;
-    font-weight: bold;
-    color: #ffc107;
+    padding: 5px;
   }
-  
-  .game-type {
-    font-size: 0.9em;
-    color: #aaa;
-    margin-top: 5px;
-  }
-  
-  .awards-section {
+
+  .matchday-awards {
     margin-top: 30px;
+    padding-top: 20px;
   }
-  
-  .awards-list {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+
+  .matchday-awards h3 {
+    font-size: 1.5em;
   }
-  
-  .award-item {
-    background-color: #2a2a2a;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
+}
+
+@media (max-width: 480px) {
+  .matchday-container {
+    margin: 5px;
   }
-  
-  .award-item strong {
-    color: #ffc107;
+
+  .matchday-selector-container {
+    margin-bottom: 10px;
+    gap: 8px;
   }
-  
-  .award-item span {
-    display: block;
+
+  .matchday-label {
+    font-size: 1em;
+  }
+
+  .matchday-select {
+    padding: 6px 10px;
+    font-size: 0.85em;
+    min-width: 180px;
+  }
+
+  .matchday-details {
+    padding: 12px;
+  }
+
+  .matchday-title {
+    font-size: 1.5em;
+  }
+
+  .matchday-info {
     font-size: 0.9em;
-    color: #aaa;
   }
+
+  .games-container {
+    margin: 15px 0;
+  }
+
+  .games-grid {
+    gap: 10px;
+  }
+
+  .game-card {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .block-title {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+
+  .game-header {
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+  }
+
+  .game-number {
+    font-size: 0.9em;
+  }
+
+  .game-type {
+    font-size: 0.75em;
+    padding: 2px 5px;
+  }
+
+  .game-content {
+    gap: 6px;
+  }
+
+  .game-team {
+    padding: 4px;
+    border-radius: 3px;
+  }
+
+  .team-players {
+    font-size: 0.85em;
+  }
+
+  .game-score {
+    font-size: 1em;
+    padding: 4px;
+    min-width: 50px;
+  }
+
+  .matchday-awards {
+    margin-top: 25px;
+    padding-top: 15px;
+  }
+
+  .matchday-awards h3 {
+    font-size: 1.3em;
+  }
+
+  .matchday-awards p {
+    font-size: 0.9em;
+    margin: 8px 0;
+  }
+}

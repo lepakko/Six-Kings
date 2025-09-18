@@ -34,7 +34,7 @@ const StatisticsTable = ({ statsData }) => {
               <td>{index + 1}</td>
               <td>{player.name}</td>
               <td>{player.gamesPlayed}</td>
-              <td>{player.winPercentage}%</td>
+              <td>{player.winPercentage}</td>
               <td>{player.wins}</td>
               <td>{player.losses}</td>
               <td>{player.setsPlus}</td>

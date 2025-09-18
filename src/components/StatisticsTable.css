@@ -34,7 +34,82 @@
     background-color: #2c2c2c;
 }
 
+.stats-table tbody tr:nth-child(even) {
+    background-color: #252525;
+}
+
+/* Highlight top 3 players */
+.stats-table tbody tr:nth-child(1) {
+    background-color: rgba(255, 215, 0, 0.3); /* Gold for 1st place - very subtle */
+    color: #fff; /* White text to match other rows */
+    font-weight: bold;
+}
+
+.stats-table tbody tr:nth-child(2) {
+    background-color: rgba(192, 192, 192, 0.3); /* Silver for 2nd place - very subtle */
+    color: #fff; /* White text to match other rows */
+    font-weight: bold;
+}
+
+.stats-table tbody tr:nth-child(3) {
+    background-color: rgba(205, 127, 50, 0.3); /* Bronze for 3rd place - very subtle */
+    color: #fff; /* White text to match other rows */
+    font-weight: bold;
+}
+
 .stats-table tbody tr:hover {
     background-color: #3a3a3a;
     transition: background-color 0.3s ease;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .table-container {
+        margin: 10px;
+    }
+
+    .table-title {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    .stats-table {
+        font-size: 0.8em;
+    }
+
+    .stats-table th, .stats-table td {
+        padding: 8px 6px;
+        min-height: 44px; /* iOS touch target */
+    }
+
+    .stats-table thead {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+}
+
+@media (max-width: 480px) {
+    .table-container {
+        margin: 5px;
+    }
+
+    .table-title {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .stats-table {
+        font-size: 0.75em;
+    }
+
+    .stats-table th, .stats-table td {
+        padding: 6px 4px;
+    }
+
+    /* Hide less important columns on very small screens */
+    .stats-table th:nth-child(11), .stats-table th:nth-child(12), .stats-table th:nth-child(13), .stats-table th:nth-child(14),
+    .stats-table td:nth-child(11), .stats-table td:nth-child(12), .stats-table td:nth-child(13), .stats-table td:nth-child(14) {
+        display: none;
+    }
 }
