@@ -1,0 +1,27 @@
+.view-selector-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.view-button {
+    padding: 12px 24px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-button.active {
+    background-color: #ffc107;
+    color: #121212;
+    font-weight: bold;
+}
+
+.view-button:hover:not(.active) {
+    background-color: #555;
+}

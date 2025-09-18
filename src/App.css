@@ -1,0 +1,206 @@
+/* src/App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Dunkler Hintergrund */
+  color: #e0e0e0; /* Helle Textfarbe */
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App-header {
+  background-color: #1f1f1f; /* Etwas helleres Grau für den Header */
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #333;
+}
+
+.App-title {
+  font-size: 2.5em;
+  color: #ffc107; /* Ein goldener oder leuchtend gelber Akzent */
+  margin-bottom: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Stil für den ViewSelector */
+.View-selector {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.View-selector-button {
+  background-color: #333;
+  color: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.View-selector-button:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+}
+
+.View-selector-button.active {
+  background-color: #ffc107;
+  color: #1f1f1f;
+  font-weight: bold;
+}
+
+/* Inhalt der Hauptansicht */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.loading-state {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2em;
+}
+
+/* Grundlegende Tabellen-Stile für Konsistenz */
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+th {
+  background-color: #2a2a2a;
+  color: #fff;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #252525;
+}
+
+/* Styles für MatchdayView.css */
+.matchday-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.matchday-controls select {
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #333;
+  color: #e0e0e0;
+  border: 1px solid #555;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.matchday-card {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.matchday-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.matchday-header h2 {
+  font-size: 1.8em;
+  color: #ffc107;
+  margin: 0 0 5px 0;
+}
+
+.matchday-header p {
+  font-size: 1em;
+  color: #aaa;
+  margin: 0;
+}
+
+.game-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.game-item {
+  background-color: #2a2a2a;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.game-players {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+.game-score {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #ffc107;
+}
+
+.game-type {
+  font-size: 0.9em;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+.awards-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.award-item {
+  background-color: #2a2a2a;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.award-item strong {
+  color: #ffc107;
+}
+
+.award-item span {
+  display: block;
+}

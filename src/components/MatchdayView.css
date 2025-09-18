@@ -1,0 +1,117 @@
+/* src/components/MatchdayView.css */
+
+.matchday-view {
+    padding: 20px;
+  }
+  
+  .matchday-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+  }
+  
+  .matchday-controls select {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .matchday-card {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  .matchday-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .matchday-header h2 {
+    font-size: 1.8em;
+    color: #ffc107;
+    margin: 0 0 5px 0;
+  }
+  
+  .matchday-header p {
+    font-size: 1em;
+    color: #aaa;
+    margin: 0;
+  }
+  
+  .game-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .game-item {
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .game-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .game-players {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #e0e0e0;
+  }
+  
+  .game-score {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ffc107;
+  }
+  
+  .game-type {
+    font-size: 0.9em;
+    color: #aaa;
+    margin-top: 5px;
+  }
+  
+  .awards-section {
+    margin-top: 30px;
+  }
+  
+  .awards-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .award-item {
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .award-item strong {
+    color: #ffc107;
+  }
+  
+  .award-item span {
+    display: block;
+    font-size: 0.9em;
+    color: #aaa;
+  }
