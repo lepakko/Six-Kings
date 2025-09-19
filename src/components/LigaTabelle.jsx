@@ -19,8 +19,8 @@ const LigaTabelle = ({ ligaData }) => {
             <th>Punkte</th>
             <th>Sets +</th>
             <th>Sets -</th>
-            <th>Beine +</th>
-            <th>Beine -</th>
+            <th>Legs +</th>
+            <th>Legs -</th>
           </tr>
         </thead>
         <tbody>
