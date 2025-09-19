@@ -20,7 +20,10 @@
 }
 
 .member-image {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .member-image img {

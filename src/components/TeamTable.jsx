@@ -1,19 +1,25 @@
 import React from 'react';
 import './TeamTable.css';
 
-// Helper function to convert Google Drive sharing links to direct download links
-const convertGoogleDriveLink = (url) => {
-  if (!url) return null;
-
-  // Check if it's a Google Drive sharing link
-  const driveMatch = url.match(/https:\/\/drive\.google\.com\/file\/d\/([^\/]+)\/view/);
-  if (driveMatch) {
-    const fileId = driveMatch[1];
-    return `https://drive.google.com/uc?export=view&id=${fileId}`;
+// Helper function to get local image path from filename
+const getLocalImagePath = (filename) => {
+  if (!filename) return null;
+  
+  // If filename already has an extension, use it as is
+  if (/\.(jpg|jpeg|png|gif|webp)$/i.test(filename)) {
+    return `/images/${filename}`;
   }
-
-  // Return original URL if it's not a Google Drive link
-  return url;
+  
+  // Otherwise, try common extensions
+  const extensions = ['jpg', 'jpeg', 'png', 'webp'];
+  for (const ext of extensions) {
+    const testPath = `/images/${filename}.${ext}`;
+    // We'll check if the image exists by trying to load it
+    // For now, default to jpg
+    break;
+  }
+  
+  return `/images/${filename}.jpg`;
 };
 
 const TeamTable = ({ teamData }) => {
@@ -32,8 +38,11 @@ const TeamTable = ({ teamData }) => {
           // Debug: Log each member to see their properties
           console.log('Team member:', index, member);
 
-          // Convert Google Drive links to direct download links
-          const imageUrl = convertGoogleDriveLink(member.Bild);
+          // Get local image path from the 'Bild' column (uppercase B as in Google Sheets)
+          const imageUrl = getLocalImagePath(member.Bild);
+          
+          // Debug: Log the image path being generated
+          console.log(`Player: ${member.Spieler}, Bild value: "${member.Bild}", Image URL: "${imageUrl}"`);
 
           return (
             <div key={index} className="team-member-card">
@@ -43,7 +52,7 @@ const TeamTable = ({ teamData }) => {
                     src={imageUrl}
                     alt={`${member.Spieler || 'Teammitglied'}`}
                     onError={(e) => {
-                      console.log('Image failed to load:', imageUrl);
+                      console.log('Local image failed to load:', imageUrl);
                       // Hide the broken image and show fallback
                       e.target.style.display = 'none';
                       e.target.nextSibling.style.display = 'flex';
