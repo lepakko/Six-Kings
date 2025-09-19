@@ -22,6 +22,12 @@ const ViewSelector = ({ activeView, onViewChange }) => {
             >
                 Spieltage
             </button>
+            <button
+                className={`view-button ${activeView === 'team' ? 'active' : ''}`}
+                onClick={() => onViewChange('team')}
+            >
+                Team
+            </button>
         </div>
     );
 };

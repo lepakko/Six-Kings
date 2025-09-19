@@ -4,6 +4,7 @@ import ViewSelector from './components/ViewSelector';
 import LigaTabelle from './components/LigaTabelle';
 import StatisticsTable from './components/StatisticsTable';
 import MatchdayView from './components/MatchdayView';
+import TeamTable from './components/TeamTable';
 import {
   processLigaTable,
   calculatePlayerStats,
@@ -35,6 +36,7 @@ const GOOGLE_SHEET_GIDS = {
   players: "0",
   liga: "1502641577",
   starter: "1065076276",
+  team: "197136951",
 };
 
 const fetchData = async (gid) => {
@@ -50,6 +52,7 @@ function App() {
     liga: [],
     players: [],
     matchdays: [],
+    team: [],
     loading: true,
   });
 
@@ -61,10 +64,11 @@ function App() {
       const allMatchdayData = await Promise.all(matchdayPromises);
       const flattenedMatchdays = allMatchdayData.flat();
 
-      const [playersData, ligaData, starterData] = await Promise.all([
+      const [playersData, ligaData, starterData, teamData] = await Promise.all([
         fetchData(GOOGLE_SHEET_GIDS.players),
         fetchData(GOOGLE_SHEET_GIDS.liga),
         fetchData(GOOGLE_SHEET_GIDS.starter),
+        fetchData(GOOGLE_SHEET_GIDS.team),
       ]);
 
       const matchdays = processMatchdays(flattenedMatchdays, starterData);
@@ -75,6 +79,7 @@ function App() {
         liga: ligaTable,
         players: playerStats,
         matchdays: matchdays,
+        team: teamData || [],
         loading: false,
       });
     } catch (error) {
@@ -103,6 +108,9 @@ function App() {
     }
     if (activeView === 'matchdays') {
       return <MatchdayView matchdays={data.matchdays} />;
+    }
+    if (activeView === 'team') {
+      return <TeamTable teamData={data.team} />;
     }
     return null;
   };
