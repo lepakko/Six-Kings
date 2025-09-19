@@ -16,19 +16,19 @@ const TeamTable = ({ teamData }) => {
               {member.Bild ? (
                 <img
                   src={member.Bild}
-                  alt={`${member.Teammember || 'Teammitglied'}`}
+                  alt={`${member.Spieler || 'Teammitglied'}`}
                   onError={(e) => {
                     e.target.src = '/placeholder-avatar.png'; // Fallback image
                   }}
                 />
               ) : (
                 <div className="placeholder-avatar">
-                  <span>{member.Teammember ? member.Teammember.charAt(0).toUpperCase() : '?'}</span>
+                  <span>{member.Spieler ? member.Spieler.charAt(0).toUpperCase() : '?'}</span>
                 </div>
               )}
             </div>
             <div className="member-info">
-              <h3 className="member-name">{member.Teammember || 'Unbekannt'}</h3>
+              <h3 className="member-name">{member.Spieler || 'Unbekannt'}</h3>
               <p className="member-role">{member.Spielerart || 'Spieler'}</p>
               <p className="member-date">
                 Beitritt: {member.Eintrittsdatum ?
