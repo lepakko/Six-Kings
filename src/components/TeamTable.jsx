@@ -2,6 +2,9 @@ import React from 'react';
 import './TeamTable.css';
 
 const TeamTable = ({ teamData }) => {
+  // Debug: Log the data to see what we're receiving
+  console.log('TeamTable received data:', teamData);
+
   if (!teamData || teamData.length === 0) {
     return <div className="loading-state">Lade Team-Daten...</div>;
   }
@@ -10,8 +13,12 @@ const TeamTable = ({ teamData }) => {
     <div className="table-container">
       <h2 className="table-title">Team Six Kings</h2>
       <div className="team-grid">
-        {teamData.map((member, index) => (
-          <div key={index} className="team-member-card">
+        {teamData.map((member, index) => {
+          // Debug: Log each member to see their properties
+          console.log('Team member:', index, member);
+
+          return (
+            <div key={index} className="team-member-card">
             <div className="member-image">
               {member.Bild ? (
                 <img
@@ -31,13 +38,14 @@ const TeamTable = ({ teamData }) => {
               <h3 className="member-name">{member.Spieler || 'Unbekannt'}</h3>
               <p className="member-role">{member.Spielerart || 'Spieler'}</p>
               <p className="member-date">
-                Beitritt: {member.Eintrittsdatum ?
-                  new Date(member.Eintrittsdatum).toLocaleDateString('de-DE') :
+                Beitritt: {member.Eintrittsdatum || member.Beitrittsdatum ?
+                  new Date(member.Eintrittsdatum || member.Beitrittsdatum).toLocaleDateString('de-DE') :
                   'Unbekannt'}
               </p>
             </div>
           </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

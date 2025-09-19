@@ -36,7 +36,7 @@ const GOOGLE_SHEET_GIDS = {
   players: "0",
   liga: "1502641577",
   starter: "1065076276",
-  team: "197136951",
+  team: "294324544",
 };
 
 const fetchData = async (gid) => {
