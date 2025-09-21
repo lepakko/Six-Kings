@@ -74,9 +74,7 @@ const TeamTable = ({ teamData }) => {
                 <h3 className="member-name">{member.Spieler || 'Unbekannt'}</h3>
                 <p className="member-role">{member.Spielerart || 'Spieler'}</p>
                 <p className="member-date">
-                  Beitritt: {member.Eintrittsdatum || member.Beitrittsdatum ?
-                    new Date(member.Eintrittsdatum || member.Beitrittsdatum).toLocaleDateString('de-DE') :
-                    'Unbekannt'}
+                  Beitritt: {member.Eintrittsdatum || member.Beitrittsdatum || 'Unbekannt'}
                 </p>
               </div>
             </div>
