@@ -129,7 +129,7 @@ export const calculatePlayerStats = (matchdaysData, allPlayersData, starterData)
             setsMinus: player.setsMinus,
             setsDifference: player.setsPlus - player.setsMinus,
             highscore: player.highscore.length > 0 ? player.highscore.length : '-',
-            lowscore: player.lowscore.length > 0 ? Math.max(...player.lowscore) : '-',
+            lowscore: player.lowscore.length > 0 ? player.lowscore.length : '-',
             highfinish: player.highfinish.length > 0 ? Math.max(...player.highfinish) : '-',
             shortgame: player.shortgame.length > 0 ? Math.max(...player.shortgame) : '-',
             starter: player.starterCount > 0 ? player.starterCount : '-',
