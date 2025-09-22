@@ -11,7 +11,7 @@
 
 .stats-table {
     width: auto;
-    min-width: 950px;
+    min-width: 700px;
     border-collapse: collapse;
     background-color: #222;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -21,7 +21,7 @@
 
 .stats-table th, .stats-table td {
     border: 1px solid #444;
-    padding: 12px;
+    padding: 8px 4px;
     text-align: center;
     font-size: 0.9rem;
     white-space: normal;
@@ -66,6 +66,12 @@
     transition: background-color 0.3s ease;
 }
 
+/* Hide less important columns on all screens */
+.stats-table th:nth-child(14), .stats-table th:nth-child(15),
+.stats-table td:nth-child(14), .stats-table td:nth-child(15) {
+    display: none;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .table-container {
@@ -83,7 +89,7 @@
     }
 
     .stats-table th, .stats-table td {
-        padding: 8px 6px;
+        padding: 6px 3px;
         min-height: 44px; /* iOS touch target */
     }
 
@@ -94,8 +100,8 @@
     }
 
     /* Hide less important columns on tablets */
-    .stats-table th:nth-child(10), .stats-table th:nth-child(11), .stats-table th:nth-child(12), .stats-table th:nth-child(13), .stats-table th:nth-child(14), .stats-table th:nth-child(15),
-    .stats-table td:nth-child(10), .stats-table td:nth-child(11), .stats-table td:nth-child(12), .stats-table td:nth-child(13), .stats-table td:nth-child(14), .stats-table td:nth-child(15) {
+    .stats-table th:nth-child(11), .stats-table th:nth-child(12), .stats-table th:nth-child(13),
+    .stats-table td:nth-child(11), .stats-table td:nth-child(12), .stats-table td:nth-child(13) {
         display: none;
     }
 }
@@ -115,7 +121,7 @@
     }
 
     .stats-table th, .stats-table td {
-        padding: 6px 4px;
+        padding: 4px 2px;
     }
 
     /* Hide less important columns on very small screens */

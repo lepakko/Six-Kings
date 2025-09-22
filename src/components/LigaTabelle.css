@@ -21,7 +21,7 @@
 
 .liga-table th, .liga-table td {
     border: 1px solid #444;
-    padding: 12px;
+    padding: 8px 4px;
     text-align: center;
     font-size: 0.9rem;
     white-space: normal;
@@ -83,7 +83,7 @@
     }
 
     .liga-table th, .liga-table td {
-        padding: 8px 6px;
+        padding: 6px 3px;
         min-height: 44px; /* iOS touch target */
     }
 
@@ -115,7 +115,7 @@
     }
 
     .liga-table th, .liga-table td {
-        padding: 6px 4px;
+        padding: 4px 2px;
     }
 
     /* Hide less important columns on very small screens */
