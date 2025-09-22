@@ -20,7 +20,7 @@
 }
 
 .stats-table th:nth-child(1), .stats-table td:nth-child(1) { width: 50px; } /* Rang */
-.stats-table th:nth-child(2), .stats-table td:nth-child(2) { width: 100px; } /* Spieler */
+.stats-table th:nth-child(2), .stats-table td:nth-child(2) { width: 120px; } /* Spieler */
 .stats-table th:nth-child(3), .stats-table td:nth-child(3) { width: 60px; } /* Spiele */
 .stats-table th:nth-child(4), .stats-table td:nth-child(4) { width: 70px; } /* Win % */
 .stats-table th:nth-child(5), .stats-table td:nth-child(5) { width: 50px; } /* Win */
@@ -39,6 +39,8 @@
     padding: 12px;
     text-align: center;
     font-size: 0.9rem;
+    white-space: normal;
+    word-wrap: break-word;
 }
 
 .stats-table thead {

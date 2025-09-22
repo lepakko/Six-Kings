@@ -20,7 +20,7 @@
 }
 
 .liga-table th:nth-child(1), .liga-table td:nth-child(1) { width: 50px; } /* Platz */
-.liga-table th:nth-child(2), .liga-table td:nth-child(2) { width: 120px; } /* Mannschaft */
+.liga-table th:nth-child(2), .liga-table td:nth-child(2) { width: 150px; } /* Mannschaft */
 .liga-table th:nth-child(3), .liga-table td:nth-child(3) { width: 60px; } /* Spiele */
 .liga-table th:nth-child(4), .liga-table td:nth-child(4) { width: 60px; } /* Siege */
 .liga-table th:nth-child(5), .liga-table td:nth-child(5) { width: 60px; } /* Niederlagen */
@@ -35,6 +35,8 @@
     padding: 12px;
     text-align: center;
     font-size: 0.9rem;
+    white-space: normal;
+    word-wrap: break-word;
 }
 
 .liga-table thead {
