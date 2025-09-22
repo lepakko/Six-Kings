@@ -164,12 +164,8 @@ export const processMatchdays = (matchdaysData, starterData) => {
       // Wenn eine Zeile Werte für diese Spalten hat, speichern wir sie
       if (row['Spieltag']) {
         currentSpieltag = row['Spieltag'];
-      }
-      if (row['Datum']) {
-        currentDate = row['Datum'];
-      }
-      if (row['Gegnerteam']) {
-        currentOpponentTeam = row['Gegnerteam'];
+        currentDate = row['Datum'] || '';
+        currentOpponentTeam = row['Gegnerteam'] || '';
       }
       
       const spieltagId = parseInt(currentSpieltag);
