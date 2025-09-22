@@ -1,5 +1,6 @@
 .table-container {
     margin: 20px;
+    overflow-x: auto;
 }
 
 .table-title {
@@ -10,6 +11,7 @@
 
 .liga-table {
     width: 100%;
+    min-width: 800px;
     border-collapse: collapse;
     background-color: #222;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -75,6 +77,7 @@
 
     .liga-table {
         font-size: 0.8em;
+        min-width: 600px;
     }
 
     .liga-table th, .liga-table td {
@@ -86,6 +89,12 @@
         position: sticky;
         top: 0;
         z-index: 10;
+    }
+
+    /* Hide Sets and Legs columns on tablets */
+    .liga-table th:nth-child(7), .liga-table th:nth-child(8), .liga-table th:nth-child(9), .liga-table th:nth-child(10),
+    .liga-table td:nth-child(7), .liga-table td:nth-child(8), .liga-table td:nth-child(9), .liga-table td:nth-child(10) {
+        display: none;
     }
 }
 

@@ -1,5 +1,6 @@
 .table-container {
     margin: 20px;
+    overflow-x: auto;
 }
 
 .table-title {
@@ -10,6 +11,7 @@
 
 .stats-table {
     width: 100%;
+    min-width: 1200px;
     border-collapse: collapse;
     background-color: #222;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -75,6 +77,7 @@
 
     .stats-table {
         font-size: 0.8em;
+        min-width: 1000px;
     }
 
     .stats-table th, .stats-table td {
@@ -86,6 +89,12 @@
         position: sticky;
         top: 0;
         z-index: 10;
+    }
+
+    /* Hide less important columns on tablets */
+    .stats-table th:nth-child(10), .stats-table th:nth-child(11), .stats-table th:nth-child(12), .stats-table th:nth-child(13), .stats-table th:nth-child(14), .stats-table th:nth-child(15),
+    .stats-table td:nth-child(10), .stats-table td:nth-child(11), .stats-table td:nth-child(12), .stats-table td:nth-child(13), .stats-table td:nth-child(14), .stats-table td:nth-child(15) {
+        display: none;
     }
 }
 
