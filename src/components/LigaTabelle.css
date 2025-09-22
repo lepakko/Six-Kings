@@ -11,13 +11,24 @@
 
 .liga-table {
     width: 100%;
-    min-width: 800px;
+    table-layout: fixed;
     border-collapse: collapse;
     background-color: #222;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     overflow: hidden;
 }
+
+.liga-table th:nth-child(1), .liga-table td:nth-child(1) { width: 50px; } /* Platz */
+.liga-table th:nth-child(2), .liga-table td:nth-child(2) { width: 120px; } /* Mannschaft */
+.liga-table th:nth-child(3), .liga-table td:nth-child(3) { width: 60px; } /* Spiele */
+.liga-table th:nth-child(4), .liga-table td:nth-child(4) { width: 60px; } /* Siege */
+.liga-table th:nth-child(5), .liga-table td:nth-child(5) { width: 60px; } /* Niederlagen */
+.liga-table th:nth-child(6), .liga-table td:nth-child(6) { width: 60px; } /* Punkte */
+.liga-table th:nth-child(7), .liga-table td:nth-child(7) { width: 60px; } /* Sets + */
+.liga-table th:nth-child(8), .liga-table td:nth-child(8) { width: 60px; } /* Sets - */
+.liga-table th:nth-child(9), .liga-table td:nth-child(9) { width: 60px; } /* Legs + */
+.liga-table th:nth-child(10), .liga-table td:nth-child(10) { width: 60px; } /* Legs - */
 
 .liga-table th, .liga-table td {
     border: 1px solid #444;
