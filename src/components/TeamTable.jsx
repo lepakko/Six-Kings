@@ -33,6 +33,9 @@ const TeamTable = ({ teamData }) => {
   return (
     <div className="table-container">
       <h2 className="table-title">Team Six Kings</h2>
+      <div className="team-image-container">
+        <img src="/images/team.jpg" alt="Team Six Kings" className="team-image" />
+      </div>
       <div className="team-grid">
         {teamData.map((member, index) => {
           // Debug: Log each member to see their properties

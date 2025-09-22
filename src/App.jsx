@@ -57,7 +57,7 @@ function App() {
       const flattenedMatchdays = matchdayData;
 
       const [playersData, ligaData, starterData, teamData] = await Promise.all([
-        fetchData(GOOGLE_SHEET_GIDS.players, GOOGLE_SHEET_ID),
+        fetchData(GOOGLE_SHEET_GIDS.players, NEW_GOOGLE_SHEET_ID),
         fetchData(GOOGLE_SHEET_GIDS.liga, GOOGLE_SHEET_ID),
         fetchData(GOOGLE_SHEET_GIDS.starter, GOOGLE_SHEET_ID),
         fetchData(GOOGLE_SHEET_GIDS.team, GOOGLE_SHEET_ID),

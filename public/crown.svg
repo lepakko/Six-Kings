@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <linearGradient id="crownGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="96" cy="96" r="90" fill="#1a1a1a"/>
+  <path d="M96 20 L120 60 L160 60 L130 90 L140 130 L96 110 L52 130 L62 90 L32 60 L72 60 Z" fill="url(#crownGradient)" stroke="#B8860B" stroke-width="3"/>
+  <circle cx="76" cy="75" r="8" fill="#FFD700"/>
+  <circle cx="116" cy="75" r="8" fill="#FFD700"/>
+  <circle cx="96" cy="95" r="6" fill="#FFD700"/>
+</svg>
