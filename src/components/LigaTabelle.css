@@ -111,17 +111,17 @@
     }
 
     .liga-table {
-        font-size: 0.75em;
-        min-width: 400px;
+        font-size: 0.6em;
+        min-width: 300px;
     }
 
     .liga-table th, .liga-table td {
-        padding: 4px 2px;
+        padding: 2px 1px;
     }
 
-    /* Hide Sets and Legs columns on small screens */
-    .liga-table th:nth-child(7), .liga-table th:nth-child(8), .liga-table th:nth-child(9), .liga-table th:nth-child(10),
-    .liga-table td:nth-child(7), .liga-table td:nth-child(8), .liga-table td:nth-child(9), .liga-table td:nth-child(10) {
+    /* Hide only Legs columns on small screens */
+    .liga-table th:nth-child(9), .liga-table th:nth-child(10),
+    .liga-table td:nth-child(9), .liga-table td:nth-child(10) {
         display: none;
     }
 }

@@ -111,17 +111,17 @@
     }
 
     .stats-table {
-        font-size: 0.75em;
-        min-width: 600px;
+        font-size: 0.6em;
+        min-width: 400px;
     }
 
     .stats-table th, .stats-table td {
-        padding: 4px 2px;
+        padding: 2px 1px;
     }
 
-    /* Hide Lowscore, Highfinish, Shortgame and Starter columns on small screens */
-    .stats-table th:nth-child(11), .stats-table th:nth-child(12), .stats-table th:nth-child(13), .stats-table th:nth-child(14), .stats-table th:nth-child(15),
-    .stats-table td:nth-child(11), .stats-table td:nth-child(12), .stats-table td:nth-child(13), .stats-table td:nth-child(14), .stats-table td:nth-child(15) {
+    /* Hide Highfinish, Shortgame and Starter columns on small screens */
+    .stats-table th:nth-child(12), .stats-table th:nth-child(13), .stats-table th:nth-child(14), .stats-table th:nth-child(15),
+    .stats-table td:nth-child(12), .stats-table td:nth-child(13), .stats-table td:nth-child(14), .stats-table td:nth-child(15) {
         display: none;
     }
 }
