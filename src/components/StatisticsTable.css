@@ -10,29 +10,14 @@
 }
 
 .stats-table {
-    width: 100%;
-    table-layout: fixed;
+    width: auto;
+    min-width: 950px;
     border-collapse: collapse;
     background-color: #222;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     overflow: hidden;
 }
-
-.stats-table th:nth-child(1), .stats-table td:nth-child(1) { width: 50px; } /* Rang */
-.stats-table th:nth-child(2), .stats-table td:nth-child(2) { width: 120px; } /* Spieler */
-.stats-table th:nth-child(3), .stats-table td:nth-child(3) { width: 60px; } /* Spiele */
-.stats-table th:nth-child(4), .stats-table td:nth-child(4) { width: 70px; } /* Win % */
-.stats-table th:nth-child(5), .stats-table td:nth-child(5) { width: 50px; } /* Win */
-.stats-table th:nth-child(6), .stats-table td:nth-child(6) { width: 50px; } /* Lose */
-.stats-table th:nth-child(7), .stats-table td:nth-child(7) { width: 60px; } /* Sets + */
-.stats-table th:nth-child(8), .stats-table td:nth-child(8) { width: 60px; } /* Sets - */
-.stats-table th:nth-child(9), .stats-table td:nth-child(9) { width: 70px; } /* Sets Diff */
-.stats-table th:nth-child(10), .stats-table td:nth-child(10) { width: 70px; } /* Highscore */
-.stats-table th:nth-child(11), .stats-table td:nth-child(11) { width: 60px; } /* Lowscore */
-.stats-table th:nth-child(12), .stats-table td:nth-child(12) { width: 80px; } /* Highfinish */
-.stats-table th:nth-child(13), .stats-table td:nth-child(13) { width: 70px; } /* Shortgame */
-.stats-table th:nth-child(14), .stats-table td:nth-child(14) { width: 60px; } /* Starter */
 
 .stats-table th, .stats-table td {
     border: 1px solid #444;
