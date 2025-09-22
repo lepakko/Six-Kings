@@ -66,9 +66,9 @@
     transition: background-color 0.3s ease;
 }
 
-/* Hide Sets and Legs columns on all screens */
-.liga-table th:nth-child(7), .liga-table th:nth-child(8), .liga-table th:nth-child(9), .liga-table th:nth-child(10),
-.liga-table td:nth-child(7), .liga-table td:nth-child(8), .liga-table td:nth-child(9), .liga-table td:nth-child(10) {
+/* Hide Legs columns on all screens */
+.liga-table th:nth-child(9), .liga-table th:nth-child(10),
+.liga-table td:nth-child(9), .liga-table td:nth-child(10) {
     display: none;
 }
 

@@ -67,8 +67,8 @@
 }
 
 /* Hide less important columns on all screens */
-.stats-table th:nth-child(11), .stats-table th:nth-child(12), .stats-table th:nth-child(13), .stats-table th:nth-child(14), .stats-table th:nth-child(15),
-.stats-table td:nth-child(11), .stats-table td:nth-child(12), .stats-table td:nth-child(13), .stats-table td:nth-child(14), .stats-table td:nth-child(15) {
+.stats-table th:nth-child(13), .stats-table th:nth-child(14), .stats-table th:nth-child(15),
+.stats-table td:nth-child(13), .stats-table td:nth-child(14), .stats-table td:nth-child(15) {
     display: none;
 }
 
@@ -99,7 +99,11 @@
         z-index: 10;
     }
 
-    /* No additional columns to hide on tablets since they're already hidden globally */
+    /* Hide additional columns on tablets */
+    .stats-table th:nth-child(11), .stats-table th:nth-child(12),
+    .stats-table td:nth-child(11), .stats-table td:nth-child(12) {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
