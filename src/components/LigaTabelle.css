@@ -112,6 +112,7 @@
 
     .liga-table {
         font-size: 0.75em;
+        min-width: 400px;
     }
 
     .liga-table th, .liga-table td {

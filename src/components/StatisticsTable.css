@@ -112,6 +112,7 @@
 
     .stats-table {
         font-size: 0.75em;
+        min-width: 600px;
     }
 
     .stats-table th, .stats-table td {
