@@ -11,7 +11,7 @@
 
 .stats-table {
     width: auto;
-    min-width: 600px;
+    min-width: 900px;
     border-collapse: collapse;
     background-color: #222;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -66,12 +66,6 @@
     transition: background-color 0.3s ease;
 }
 
-/* Hide less important columns on all screens */
-.stats-table th:nth-child(13), .stats-table th:nth-child(14), .stats-table th:nth-child(15),
-.stats-table td:nth-child(13), .stats-table td:nth-child(14), .stats-table td:nth-child(15) {
-    display: none;
-}
-
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .table-container {
@@ -99,9 +93,9 @@
         z-index: 10;
     }
 
-    /* Hide additional columns on tablets */
-    .stats-table th:nth-child(11), .stats-table th:nth-child(12),
-    .stats-table td:nth-child(11), .stats-table td:nth-child(12) {
+    /* Hide Shortgame and Starter columns on tablets */
+    .stats-table th:nth-child(13), .stats-table th:nth-child(14), .stats-table th:nth-child(15),
+    .stats-table td:nth-child(13), .stats-table td:nth-child(14), .stats-table td:nth-child(15) {
         display: none;
     }
 }
@@ -124,5 +118,9 @@
         padding: 4px 2px;
     }
 
-    /* No additional columns to hide on small screens since they're already hidden globally */
+    /* Hide Lowscore, Highfinish, Shortgame and Starter columns on small screens */
+    .stats-table th:nth-child(11), .stats-table th:nth-child(12), .stats-table th:nth-child(13), .stats-table th:nth-child(14), .stats-table th:nth-child(15),
+    .stats-table td:nth-child(11), .stats-table td:nth-child(12), .stats-table td:nth-child(13), .stats-table td:nth-child(14), .stats-table td:nth-child(15) {
+        display: none;
+    }
 }

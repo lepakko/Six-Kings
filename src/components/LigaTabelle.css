@@ -11,7 +11,7 @@
 
 .liga-table {
     width: auto;
-    min-width: 500px;
+    min-width: 650px;
     border-collapse: collapse;
     background-color: #222;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -66,12 +66,6 @@
     transition: background-color 0.3s ease;
 }
 
-/* Hide Legs columns on all screens */
-.liga-table th:nth-child(9), .liga-table th:nth-child(10),
-.liga-table td:nth-child(9), .liga-table td:nth-child(10) {
-    display: none;
-}
-
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .table-container {
@@ -99,7 +93,11 @@
         z-index: 10;
     }
 
-    /* No additional columns to hide on tablets since they're already hidden globally */
+    /* Hide Legs columns on tablets */
+    .liga-table th:nth-child(9), .liga-table th:nth-child(10),
+    .liga-table td:nth-child(9), .liga-table td:nth-child(10) {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -120,5 +118,9 @@
         padding: 4px 2px;
     }
 
-    /* No additional columns to hide on small screens since they're already hidden globally */
+    /* Hide Sets and Legs columns on small screens */
+    .liga-table th:nth-child(7), .liga-table th:nth-child(8), .liga-table th:nth-child(9), .liga-table th:nth-child(10),
+    .liga-table td:nth-child(7), .liga-table td:nth-child(8), .liga-table td:nth-child(9), .liga-table td:nth-child(10) {
+        display: none;
+    }
 }
