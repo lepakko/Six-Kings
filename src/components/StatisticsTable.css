@@ -11,7 +11,7 @@
 
 .stats-table {
     width: auto;
-    min-width: 700px;
+    min-width: 600px;
     border-collapse: collapse;
     background-color: #222;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -67,8 +67,8 @@
 }
 
 /* Hide less important columns on all screens */
-.stats-table th:nth-child(14), .stats-table th:nth-child(15),
-.stats-table td:nth-child(14), .stats-table td:nth-child(15) {
+.stats-table th:nth-child(11), .stats-table th:nth-child(12), .stats-table th:nth-child(13), .stats-table th:nth-child(14), .stats-table th:nth-child(15),
+.stats-table td:nth-child(11), .stats-table td:nth-child(12), .stats-table td:nth-child(13), .stats-table td:nth-child(14), .stats-table td:nth-child(15) {
     display: none;
 }
 
@@ -99,11 +99,7 @@
         z-index: 10;
     }
 
-    /* Hide less important columns on tablets */
-    .stats-table th:nth-child(11), .stats-table th:nth-child(12), .stats-table th:nth-child(13),
-    .stats-table td:nth-child(11), .stats-table td:nth-child(12), .stats-table td:nth-child(13) {
-        display: none;
-    }
+    /* No additional columns to hide on tablets since they're already hidden globally */
 }
 
 @media (max-width: 480px) {
@@ -124,9 +120,5 @@
         padding: 4px 2px;
     }
 
-    /* Hide less important columns on very small screens */
-    .stats-table th:nth-child(11), .stats-table th:nth-child(12), .stats-table th:nth-child(13), .stats-table th:nth-child(14),
-    .stats-table td:nth-child(11), .stats-table td:nth-child(12), .stats-table td:nth-child(13), .stats-table td:nth-child(14) {
-        display: none;
-    }
+    /* No additional columns to hide on small screens since they're already hidden globally */
 }
