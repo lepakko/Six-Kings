@@ -119,9 +119,9 @@
         padding: 2px 1px;
     }
 
-    /* Hide Highfinish, Shortgame and Starter columns on small screens */
-    .stats-table th:nth-child(12), .stats-table th:nth-child(13), .stats-table th:nth-child(14), .stats-table th:nth-child(15),
-    .stats-table td:nth-child(12), .stats-table td:nth-child(13), .stats-table td:nth-child(14), .stats-table td:nth-child(15) {
+    /* Hide Shortgame and Starter columns on small screens */
+    .stats-table th:nth-child(13), .stats-table th:nth-child(14), .stats-table th:nth-child(15),
+    .stats-table td:nth-child(13), .stats-table td:nth-child(14), .stats-table td:nth-child(15) {
         display: none;
     }
 }
