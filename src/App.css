@@ -61,7 +61,7 @@ body {
 /* Inhalt der Hauptansicht */
 .content {
   flex-grow: 1;
-  padding: 20px;
+  padding: 10px;
   overflow-x: auto;
   overflow-y: auto;
 }
@@ -74,6 +74,7 @@ body {
 
 /* Grundlegende Tabellen-Stile für Konsistenz */
 .table-container {
+  margin: 10px;
   overflow-x: auto;
 }
 
@@ -240,6 +241,7 @@ tr:hover {
 
   /* Table responsiveness */
   .table-container {
+    margin: 10px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
