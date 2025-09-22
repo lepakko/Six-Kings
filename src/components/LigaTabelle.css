@@ -78,12 +78,12 @@
     }
 
     .liga-table {
-        font-size: 0.8em;
-        min-width: 600px;
+        font-size: 0.9em;
+        min-width: 650px;
     }
 
     .liga-table th, .liga-table td {
-        padding: 6px 3px;
+        padding: 8px 4px;
         min-height: 44px; /* iOS touch target */
     }
 
@@ -93,11 +93,8 @@
         z-index: 10;
     }
 
-    /* Hide Legs columns on tablets */
-    .liga-table th:nth-child(9), .liga-table th:nth-child(10),
-    .liga-table td:nth-child(9), .liga-table td:nth-child(10) {
-        display: none;
-    }
+    /* Show all columns on tablets */
+    /* Removed hiding of Legs columns */
 }
 
 @media (max-width: 480px) {
@@ -111,17 +108,14 @@
     }
 
     .liga-table {
-        font-size: 0.6em;
-        min-width: 300px;
+        font-size: 0.8em;
+        min-width: 500px;
     }
 
     .liga-table th, .liga-table td {
-        padding: 2px 1px;
+        padding: 6px 3px;
     }
 
-    /* Hide only Legs columns on small screens */
-    .liga-table th:nth-child(9), .liga-table th:nth-child(10),
-    .liga-table td:nth-child(9), .liga-table td:nth-child(10) {
-        display: none;
-    }
+    /* Show all columns on small screens */
+    /* Removed hiding of Legs columns */
 }
